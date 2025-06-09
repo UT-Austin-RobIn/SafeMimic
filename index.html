@@ -238,12 +238,14 @@
         be dangerous, as the robot needs to experience and learn what
         actions may lead to unsafe states and when. Therefore, we
         pretrain an ensemble of Safety Q-functions in simulation, one
-        for each type of unsafe transition. The ensemble of Safety Q-
-        functions is pretrained in domain-randomized environments in
-        the simulator OmniGibson in different scenarios, includ-
-        ing articulated object interaction, rigid-body pick-and-place,
+        for each type of unsafe transition. 
+        The ensemble of Safety Q-functions is pretrained in domain-randomized environments in
+        the simulator OmniGibson in different scenarios, including 
+        articulated object interaction, rigid-body pick-and-place,
         and base navigation by sampling random and noise-corrupted
-        task-related actions.          
+        task-related actions.        
+        Here we show an example for the simulation environment
+        for training safety q-functions based on high forces and dropping objects. 
       </p>
       </div>
     </div>
