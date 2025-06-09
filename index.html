@@ -209,13 +209,14 @@
         <div class="content has-text-justified">
           <p>
             From an RGB-D video of a human performing a multi-step mobile manipulation task acquired by the robot, SafeMimic uses a combination of human pose tracking models
-            and VLM prompting to perform coarse-to-fine segmentation obtaining semantic changes --"what? -- and human action trajectories --"how?"--, 
+            and VLM prompting to perform coarse-to-fine segmentation obtaining semantic changes, "what?" and human action trajectories, "how?", 
             and translating them to the robot's point of view (left). 
             SafeMimic then refines and adapts each task segment safely by sampling and verifying actions before executing them thanks to an ensemble of safety Q-functions pretrained in simulation, 
-            Q_<sub>safe</sub> (top right). 
-            <!-- If forward progress is not possible, SafeMimic autonomously backtracks and tries different actions (\textit{\textcolor{orange}{orange arrows}}). 
-            When required to overcome large differences in morphology, SafeMimic explores alternative grasp modes (\textit{second row of samples}), adapting the grasp to enable successful execution. 
-            Successful attempts are detected by a VLM that verifies when the parsed semantic change of the segment is achieved. Successes are stored and used to train a policy memory module with geometric augmentations  (\textit{bottom right}, Sec.~\ref{ss:tc}) that predicts actions (grasps or action trajectories) in subsequent attempts, given a pointcloud and language task description, in order to reduce the need for exploration -->
+            Q<sub>safe</sub> (top right). 
+            If forward progress is not possible, SafeMimic autonomously backtracks and tries different actions (orange arrows). 
+            When required to overcome large differences in morphology, SafeMimic explores alternative grasp modes (second row of samples), adapting the grasp to enable successful execution. 
+            Successful attempts are detected by a VLM that verifies when the parsed semantic change of the segment is achieved. Successes are stored and used to train a policy memory module with geometric augmentations  (bottom right) 
+            that predicts actions (grasps or action trajectories) in subsequent attempts, given a pointcloud and language task description, in order to reduce the need for exploration.
             
             <!-- ScrewMimic inputs an RGB-D video of a human performing a bimanual task and uses off-the-shelf hand tracking (HT) 
             models to extract a trajectory of wrist poses (&tau;<sup>h</sup><sub>l</sub>, &tau;<sup>h</sup><sub>r</sub>) and grasp contact 
