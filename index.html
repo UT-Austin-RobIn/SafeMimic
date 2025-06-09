@@ -229,6 +229,25 @@
 <section class="section hero is-light">
 <div class="container">
   <h2 class="title is-2" style="text-align: center;">Learning Safety Q-Functions</h2>
+
+  <div class="columns is-centered">
+    <div class="column is-four-fifths is-centered has-text-centered">
+      <div class="content has-text-justified">
+        <p>
+        Training Safety Q-functions in the real world would
+        be dangerous, as the robot needs to experience and learn what
+        actions may lead to unsafe states and when. Therefore, we
+        pretrain an ensemble of Safety Q-functions in simulation, one
+        for each type of unsafe transition. The ensemble of Safety Q-
+        functions is pretrained in domain-randomized environments in
+        the simulator OmniGibson in different scenarios, includ-
+        ing articulated object interaction, rigid-body pick-and-place,
+        and base navigation by sampling random and noise-corrupted
+        task-related actions.          
+      </p>
+      </div>
+    </div>
+  </div>
   
   <div class="columns is-centered">
     <div class="column is-two-fifths">
@@ -247,7 +266,7 @@
     </div>
   </div>
 
-<section class="section hero is-light">
+<section class="section">
 <div class="container">
   <h2 class="title is-2" style="text-align: center;">Experiments</h2>
   
