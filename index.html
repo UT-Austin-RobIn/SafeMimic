@@ -208,7 +208,7 @@
       <div class="column is-four-fifths is-centered has-text-centered">
         <div class="content has-text-justified">
           <p>
-            From an RGB-D video of a human performing a multi-step mobile manipulation task acquired by the robot, SafeMimic uses a combination of human pose tracking models
+            <!-- From an RGB-D video of a human performing a multi-step mobile manipulation task acquired by the robot, SafeMimic uses a combination of human pose tracking models
             and VLM prompting to perform coarse-to-fine segmentation obtaining semantic changes, "what?" and human action trajectories, "how?", 
             and translating them to the robot's point of view (left). 
             SafeMimic then refines and adapts each task segment safely by sampling and verifying actions before executing them thanks to an ensemble of safety Q-functions pretrained in simulation, 
@@ -216,11 +216,14 @@
             If forward progress is not possible, SafeMimic autonomously backtracks and tries different actions (orange arrows). 
             When required to overcome large differences in morphology, SafeMimic explores alternative grasp modes (second row of samples), adapting the grasp to enable successful execution. 
             Successful attempts are detected by a VLM that verifies when the parsed semantic change of the segment is achieved. Successes are stored and used to train a policy memory module with geometric augmentations  (bottom right) 
-            that predicts actions (grasps or action trajectories) in subsequent attempts, given a pointcloud and language task description, in order to reduce the need for exploration.
+            that predicts actions (grasps or action trajectories) in subsequent attempts, given a pointcloud and language task description, in order to reduce the need for exploration. -->
+            SafeMimic consists of three steps. The first step extracts the semantic segments (what the human did) and the human actions (how did the human do it) from a single third-person video.
+            The next step helps the robot to safely and autonomously adapt the human actions to the robot's own embodiment. Finally, in the third step the robot uses the policy memory module to 
+            learn from the successful trajectories to reduce the exploration in future trials.
           </p>
         </div>
         <!-- <img src="static/images/SafeMimic_Method.png" alt="SafeMimic Overview" width="100%"/> -->
-        <video poster="" id="video3" autoplay controls muted loop height="100%" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;">
+        <video poster="" id="video3" autoplay controls muted loop height="100%" style="margin: 1.0%;">
           <!-- Your video file here -->
           <source src="static/videos/safemimic_website_method.mp4" type="video/mp4">
         </video>
