@@ -246,13 +246,12 @@
           actions may lead to unsafe states and when. Therefore, we
           pretrain an ensemble of Safety Q-functions in simulation, one
           for each type of unsafe transition. 
+          The safety Q-value is 1 if the action (a) from the state (s) is unsafe else it's 0 (left video).
           The ensemble of Safety Q-functions is pretrained in domain-randomized environments in
           the simulator OmniGibson in different scenarios, including 
           articulated object interaction, rigid-body pick-and-place,
           and base navigation by sampling random and noise-corrupted
-          task-related actions.        
-          Here we show an example for the simulation environment
-          for training safety q-functions based on high forces and dropping objects. 
+          task-related actions (right video). 
         </p>
         </div>
       </div>
